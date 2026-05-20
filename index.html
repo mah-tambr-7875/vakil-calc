@@ -1,24 +1,43 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>محاسبه‌گر ریال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محاسبه تمبر و حق الوکاله</title>
 <style>
 body { font-family: sans-serif; text-align: center; background: #f0f0f0; padding: 20px; }
 .box { background: white; max-width: 350px; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
 input, select, button { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; font-size: 18px; box-sizing: border-box; }
 button { background: #27ae60; color: white; border: none; font-weight: bold; cursor: pointer; }
 #resultArea { margin-top: 20px; padding: 15px; background: #ffffcc; border: 1px solid #e6e600; font-size: 20px; font-weight: bold; }
+
+/* استایل بخش کپی رایت */
+.copyright { margin-top: 20px; font-size: 12px; color: #777; border-top: 1px dotted #ccc; padding-top: 10px; }
+
+/* استایل دکمه پشتیبانی */
+.support-link {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 15px;
+background-color: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-size: 14px;
+transition: 0.3s;
+}
+.support-link:hover { background-color: #0056b3; }
 </style>
 </head>
 <body>
-‌
+
 <div class="box">
-<h3>محاسبه  تمبر و حق الوکاله</h3>
-‌
+<h3>محاسبه تمبر و حق الوکاله</h3>
+
 <div style="text-align:right">مبلغ تمبر (ریال):</div>
 <input type="number" id="inp" placeholder="مثلاً 500000">
-‌
+
 <div style="text-align:right">نوع پرونده:</div>
 <select id="sel">
 <option value="1">دادخواست بدوی</option>
@@ -28,10 +47,10 @@ button { background: #27ae60; color: white; border: none; font-weight: bold; cur
 <option value="2">فرجامخواهی</option>
 <option value="2">اعاده دادرسی</option>
 <option value="3">دادخواست تقابل</option>
-<option value="3">دادخواست جلب ثالث</option>
-<option value="3">دادخواست ورود ثالث</option>
+<option value="3">جلب ثالث</option>
+<option value="3">ورود ثالث</option>
 </select>
-‌
+
 <button onclick="
 var v = document.getElementById('inp').value;
 var s = document.getElementById('sel').value;
@@ -45,11 +64,21 @@ document.getElementById('out').innerHTML = Math.round(res).toLocaleString('en-US
 alert('لطفاً عدد وارد کنید');
 }
 ">محاسبه کن</button>
-‌
+
 <div id="resultArea">
 خروجی: <span id="out">0</span> ریال
 </div>
+
+<!-- دکمه پشتیبانی -->
+<a href="https://ble.ir/09154237875?text=من از برنامه محاسبه تمبر نیاز به پشتیبانی دارم" class="support-link">
+📞 درخواست پشتیبانی در بله
+</a>
+
+<!-- بخش کپی رایت -->
+<div class="copyright">
+تمامی حقوق این برنامه متعلق به <b> مهلا الفتی </b> می‌باشد.
 </div>
-‌
+</div>
+
 </body>
 </html>
